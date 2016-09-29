@@ -21,11 +21,7 @@ X_rec = zeros(size(Z, 1), size(U, 1));
 %               Notice that U(j, 1:K) is a row vector.
 %               
 
-j = size(U, 1);
-% for each dimension
-for i = 1:j
-	X_rec(:, i) = Z * U(i, 1:K)';
-end
+X_rec = Z * U(1:end, 1:K)';
 
 % =============================================================
 
